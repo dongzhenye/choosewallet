@@ -1,38 +1,43 @@
 # Naming Decision – `choosewallet`
 
 **Context**  
-You evaluated keeping the project name consistent across the domain, GitHub repository, and local directory. Options considered:
+Naming should stay consistent across domain, GitHub repository, and local directory. Options explored:
 
 - `choosewallet`
 - `choose-wallet`
 - `choose_wallet` (discarded early because it conflicts with JavaScript/URL norms)
+- Later revisit: `walletchoose` (ultimately rejected)
 
-At the time of the decision the domain had not yet been registered, so both `choosewallet.org` and `choose-wallet.org` remained available.
+When the decision was made, both `choosewallet.org` and `choose-wallet.org` were available.
 
-**Considerations**
+**Why `choosewallet` Remains Preferred**
 
-1. **Consistency with Branding**
-   - The planned brand name is “Choose Your Wallet”.
-   - Using `choosewallet` directly mirrors the domain and avoids introducing a hyphen that doesn’t exist in the brand.
+1. **Brand Clarity & SEO**
+   - “Choose Your Wallet” is the user-facing promise; `choosewallet` matches that phrasing and aligns with search intent (“choose a wallet”).
 
-2. **Developer Experience**
-   - Repository and directory names without punctuation are simpler for shell commands, CI configuration, and package scripts (no quoting or special handling).
-   - Hyphenated repo names are common—over 50% of the top 30 starred GitHub repos use them (e.g., `public-apis`, `system-design-primer`). However, adopting a hyphen would make the repo diverge from the domain.
+2. **Consistency Across Assets**
+   - Same string for domain, repo (`github.com/dongzhenye/choosewallet`), directory, and future Vercel deployments keeps URLs, badges, and tooling predictable.
+   - Avoids hyphen-related quoting issues in shell scripts, CI configs, and environment variables.
 
-3. **SEO & URL Alignment**
-   - Domains and URLs consistently written as `choosewallet` reinforce a single canonical identifier.
-   - If necessary, the hyphenated domain can be registered later and redirected, but all primary assets benefit from one spelling.
+3. **Developer Experience**
+   - Hyphenated names are common (≈53% of top-starred GitHub projects), but using the plain form gives frictionless CLI usage while still allowing derivative repos (`choosewallet-data`, `choosewallet-design`).
 
-4. **Future Proofing**
-   - Additional repos can extend the namespace (e.g., `choosewallet-data`, `choosewallet-design`) without ambiguity.
+4. **Flexibility**
+   - Alternate domains (e.g., `choose-wallet.org`, `walletchoose.com`) can be registered later for redirects without rebranding the primary project.
+
+**Comparison: `choosewallet` vs `walletchoose`**
+
+| Brand          | Score | Why                                                                                                     |
+|----------------|:-----:|----------------------------------------------------------------------------------------------------------|
+| choosewallet   | 8/10  | Natural phrasing, keyword aligned, mirrors domain & repo, instills immediate clarity.                   |
+| walletchoose   | 7/10  | Distinct and brandable, but sounds less natural; requires more messaging to reinforce the core concept. |
 
 **Conclusion**
 
-> Keep the repository, directory, and primary domain name aligned as `choosewallet`.  
-> Optionally register `choose-wallet.org` later to redirect to `choosewallet.org`, but build the project and tooling around the non-hyphenated name.
+> Keep “ChooseWallet” as the master brand and naming convention. Register or redirect alternates as needed, but the project identity—and code artifacts—should remain `choosewallet`.
 
 **Next Steps**
 
-1. Register `choosewallet.org` (and consider `choose-wallet.org` for redirection).
-2. Create the GitHub repository `github.com/dongzhenye/choosewallet`.
-3. Maintain documentation and deployment scripts using the `choosewallet` naming convention.
+1. Register `choosewallet.org` (optional: secure `choose-wallet.org` or `walletchoose.com` for redirects).
+2. Continue using `choosewallet` across documentation, code, and deployments.
+3. Revisit naming only if future trademark or market conflicts appear.
