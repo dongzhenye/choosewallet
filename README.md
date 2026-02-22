@@ -43,3 +43,8 @@ An open, community-maintained advisor that helps newcomers and power users pick 
 2. Initialize project scaffolding (framework selection, linting, CI placeholders).
 3. Publish the repository to `github.com/dongzhenye` and configure Vercel integration.
 4. Begin populating wallet dataset and design the recommendation flow.
+
+## Operational Notes
+
+- Previous push failures were due to an inactive proxy at `127.0.0.1:7890`. Ensure proxy config matches your current network setup, or switch remote to SSH (`git@github.com:dongzhenye/choosewallet.git`).
+- Keep repo and directory names aligned (`choosewallet`) for consistency with documentation and deployment automation.
