@@ -35,7 +35,7 @@ An open, community-maintained advisor that helps newcomers and power users pick 
 - [ ] Set up CI to run link checks and lint JSON data.
 
 ## Research & References
-- Competitor analysis and source links collected in `docs/competitor-landscape.md`.
+- Competitor analysis and source links collected in `docs/research.md`.
 - Additional brainstorming notes will be added as features are scoped.
 
 ## Next Steps
